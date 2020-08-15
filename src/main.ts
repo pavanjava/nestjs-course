@@ -16,7 +16,6 @@ async function bootstrap() {
         }
     ));
     app.useGlobalFilters(new HttpExceptionFilter());
-    app.useGlobalGuards(new ApiKeyGuard());
     await app.listen(3000);
     Logger.log(`Server running on 3000`);
 }

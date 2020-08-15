@@ -14,12 +14,14 @@ import {CoffeesService} from "./coffees.service";
 import {CreateCoffeeDto} from "./dto/create-coffee.dto";
 import {UpdateCoffeeDto} from "./dto/update-coffee.dto";
 import {PaginationDto} from "../common/dto/pagination-dto";
+import {Public} from "../common/decorators/public.decorator";
 
 @Controller('api/v1')
 export class CoffeesController {
 
     constructor(private readonly coffeeService: CoffeesService) {}
 
+    @Public()
     @Get('coffees')
     @HttpCode(HttpStatus.OK)
     findAll(@Query() pagination: PaginationDto) {
