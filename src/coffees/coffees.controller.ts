@@ -15,7 +15,9 @@ import {CreateCoffeeDto} from "./dto/create-coffee.dto";
 import {UpdateCoffeeDto} from "./dto/update-coffee.dto";
 import {PaginationDto} from "../common/dto/pagination-dto";
 import {Public} from "../common/decorators/public.decorator";
+import {ApiTags} from "@nestjs/swagger";
 
+@ApiTags('coffees')
 @Controller('api/v1')
 export class CoffeesController {
 
