@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { CoffeesModule } from './coffees/coffees.module';
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {OrmConfig} from "./orm-config";
+import {ConfigModule} from "@nestjs/config";
 
 @Module({
-  imports: [CoffeesModule, TypeOrmModule.forRoot(OrmConfig)],
+  imports: [ConfigModule.forRoot(), CoffeesModule, TypeOrmModule.forRoot(OrmConfig)],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -29,11 +29,7 @@ export class CoffeesController {
     @Get('coffees/:id')
     @HttpCode(HttpStatus.OK)
     findOne(@Param('id') id: number) {
-        const coffee = this.coffeeService.findOne(id);
-        if(!coffee){
-            throw new NotFoundException(`record with id: ${id} does not exist`);
-        }
-        return coffee;
+        return this.coffeeService.findOne(id);
     }
 
     @Post('coffees')
