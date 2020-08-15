@@ -10,7 +10,13 @@
 ## Description
 
 This Repository mainly talks about the code that has been taught in official nestjs course. the project is called "iluvcoffee"
-This project deals with TypeOrm integrated with Postgres.  
+the following are the concepts covered in this branch.
+
+- TypeORM with Postgres
+- Exception Filters
+    - This a basic implementation to catch, Throe and Log the api level exceptions
+- Gaurds
+    - This a basic implementation to validate the api authentication  
 
 ## Installation
 
