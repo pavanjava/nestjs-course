@@ -9,7 +9,8 @@
   
 ## Description
 
-This Repository mainly talks about the code that has been taught in official nestjs course. the project is called "iluvcoffee"  
+This Repository mainly talks about the code that has been taught in official nestjs course. the project is called "iluvcoffee"
+This project deals with TypeOrm integrated with Postgres.  
 
 ## Installation
 
