@@ -38,7 +38,8 @@ $ yarn start:prod
 ```
 
 ## Test
-
+The project has only one (CoffeeService - FindOne) unit test case written and remaining has left wantedly to be coded by yourself.
+The project as base structure created for e2e tests and implemented one of the test findAll() remaing is left for you to code.
 ```bash
 # unit tests
 $ yarn test

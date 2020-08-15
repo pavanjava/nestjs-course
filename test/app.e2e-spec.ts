@@ -22,8 +22,12 @@ describe('AppController (e2e)', () => {
   })
 
   it.todo('Create [POST /]');
-  it.todo('Get all [GET /]');
   it.todo('Get one [GET /:id]');
   it.todo('Update one [PATCH /:id]');
   it.todo('Delete one [DELETE /:id]');
+  it('/ (GET)',() => {
+    return request(app.getHttpServer())
+      .get('/api/v1/coffees')
+      .expect(200);
+  });
 });
