@@ -11,23 +11,22 @@ import {
     Query
 } from '@nestjs/common';
 import {CoffeesService} from "./coffees.service";
-import {Coffee} from "./entities/coffee.entity";
 import {CreateCoffeeDto} from "./dto/create-coffee.dto";
 import {UpdateCoffeeDto} from "./dto/update-coffee.dto";
 
-@Controller('coffees')
+@Controller('api/v1')
 export class CoffeesController {
 
     constructor(private readonly coffeeService: CoffeesService) {}
 
-    @Get('flavors')
+    @Get('coffees')
     @HttpCode(HttpStatus.OK)
     findAll(@Query() pagination) {
         // const {limit, offset} = pagination;
         return this.coffeeService.findAll();
     }
 
-    @Get(':id')
+    @Get('coffees/:id')
     @HttpCode(HttpStatus.OK)
     findOne(@Param('id') id: number) {
         const coffee = this.coffeeService.findOne(id);
@@ -37,18 +36,18 @@ export class CoffeesController {
         return coffee;
     }
 
-    @Post()
+    @Post('coffees')
     @HttpCode(HttpStatus.CREATED)
     create(@Body() body: CreateCoffeeDto) {
         return this.coffeeService.create(body);
     }
 
-    @Patch(':id')
+    @Patch('coffees/:id')
     update(@Param('id') id: number, @Body() body: UpdateCoffeeDto){
         return this.coffeeService.update(id, body);
     }
 
-    @Delete(':id')
+    @Delete('coffees/:id')
     remove(@Param('id') id: number){
         return this.coffeeService.remove(id);
     }
