@@ -51,11 +51,7 @@ $ yarn test:cov
 ```
 
 ## API Endpoints
-Will commit the OpenAPI specification for the APIs in subsequent commits
-- findAll: GET /coffees/flavors
-- findOne: GET /coffees/{id}
-- update: PATCH /coffees/{id} along with payload
-- remove: DELETE /coffees/{id}
+please refer to swagger documentation at [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
 
 ## Stay in touch
