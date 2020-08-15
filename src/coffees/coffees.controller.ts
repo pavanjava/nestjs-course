@@ -13,6 +13,7 @@ import {
 import {CoffeesService} from "./coffees.service";
 import {CreateCoffeeDto} from "./dto/create-coffee.dto";
 import {UpdateCoffeeDto} from "./dto/update-coffee.dto";
+import {PaginationDto} from "../common/dto/pagination-dto";
 
 @Controller('api/v1')
 export class CoffeesController {
@@ -21,9 +22,8 @@ export class CoffeesController {
 
     @Get('coffees')
     @HttpCode(HttpStatus.OK)
-    findAll(@Query() pagination) {
-        // const {limit, offset} = pagination;
-        return this.coffeeService.findAll();
+    findAll(@Query() pagination: PaginationDto) {
+        return this.coffeeService.findAll(pagination);
     }
 
     @Get('coffees/:id')
